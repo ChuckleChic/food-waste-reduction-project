@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+{% block body %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Reduction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #341f4b, #8e44ad);
+            color: #fff;
+        }
+
+        #hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        #hero-section h1 {
+            font-size: 2em;
+            margin: 20px 0;
+            animation: slideInUp 1s ease-in-out;
+        }
+
+        #hero-section p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 20px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hero-section">
+        <h1>"Savoring Sustainability: A Flavorful Journey Towards Zero Food Waste"</h1>
+        <p>
+            "Turning leftovers into love notes for the planet: Because every bite saved is a story of sustainability. Reduce, reuse, and savor the difference!" 
+        </p>
+    </div>
+
+    <!-- Add more content, features, or animations as needed -->
+
+</body>
+</html>
+{% endblock body %}
+

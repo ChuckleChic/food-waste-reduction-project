@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} About Us {% endblock title %}
+{% block body %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Purple Background</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #8E2DE2, #4A00E0);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin: 20px; /* Add margin to the content-box */
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Welcome to Creative Purple Background</h1>
+        <p>This is some sample text in a creatively designed purple background.</p>
+    </div>
+</body>
+</html>
+
+
+{% endblock body %}
