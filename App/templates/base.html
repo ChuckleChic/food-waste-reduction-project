@@ -1,212 +1,72 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="base.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    *{
-      padding: 0;
-      margin: 0;
-      color: rgb(3, 3, 3);
-  }
-  body{
-      width: 100%;
-      height: 100%;
-  }
-  ::-webkit-scrollbar{
-      width: 15px;
-  }
-  ::-webkit-scrollbar-track{
-      background-color: rgb(170, 170, 170);
-  }
-  ::-webkit-scrollbar-thumb{
-      background-color: rgb(29, 28, 28);
-      border-radius: 3px;
-  }
-  
-  header{
-      position:sticky;
-      top: 0;
-      width: 100%;
-      
-  }
-  
-  .navbar{
-      width: 100%;
-      background-color:white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      box-shadow: 5px 5px 7px rgb(18, 180, 180);
-  } 
-  
-  #logo{
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-size: 30px;
-      font-weight: bolder;
-      padding-left: 15px;
-  }
-  
-  .search input{
-      border-radius: 9px;
-      padding: 5px 15px;
-      outline: none;
-      width:500px;
-  }
-  
-  #Ssearch {
-      padding: 5px 15px;
-      border-radius: 9px; 
-   }
-   #Ssearch:hover{
-      font-weight:bold;
-      text-decoration: underline;
-   }
-  
-  .side a{
-      padding: 20px;
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-weight: 600;
-      transition: all 500 ease-in-out;
-  }
-  .side a:hover{
-      font-weight: bold;
-      text-decoration: underline;
-  
-  } 
-  
-  .wraper{
-      display: flex;
-      
-      justify-content:space-around;
-      width: 97.3%;
-  }
-  
-  .wraper h1{
-      padding-top: 150px;
-  }
-  .name h1{
-      font-size: 55px;
-  }
-  
-  .btn-grp{
-      display: flex;
-  
-  }
-  .dropPlace{
-      padding-top: 50px;
-  }
-  
-  .dropsize{
-      width: 350px;
-  }
-  .food{
-      height: 700px;
-      width: 600px;
-      padding: 100px 0px;
-      border-radius: 50%;
-      display: flex;
-  }
-  
-  body{
-      margin: 0;
-      padding: 0;
-      background-color: #2f3542;
-      color: #fff;
-      height: 100vh;
-      font-family: "Montserrat", sans-serif;
-     
-  }
-  body::before{
-      content: '';
-      background-image: url('https://images.unsplash.com/photo-1449962887303-b4a91c7c560a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhY2tncm91bmQlMjBpbWFnZSUyMEZPT0R8ZW58MHx8MHx8fDA%3D');
-      object-fit: cover ;
-      background-repeat: no-repeat;
-      background-size: cover;
-      object-position: center;
-      opacity: 0.5;
-      height: 100%;
-      width: 100%;
-      object-position: center;
-      position: absolute;
-      z-index: -1;
-  }
-  
-  .animated-text{
-      padding-top: 100px;
-      font-size: 34px;
-      font-weight: 600;
-      min-width: 280px;
-  }
-  
-  .animated-text span{
-      position: relative;
-  }
-  
-  .animated-text span::before{
-      content: "Save food";
-      color: #ba0cf4;
-      animation: words 20s infinite;
-  }
-  
-  .animated-text span::after{
-      content: "";
-      position: absolute;
-      width: calc(100% + 8px);
-      height: 100%;
-      background-color: #444241;
-      border-left: 2px solid #cc00ff;
-      right: -8px;
-      animation: cursor .8s infinite, typing 20s steps(14) infinite;
-  }
-  
-  @keyframes cursor {
-      to{
-          border-left: 2px solid #ff7f5000;
-      }
-  }
-  
-  @keyframes words {
-      0%,20%{
-          content: "See you Smiling";
-      }
-      21%,40%{
-          content: "Stay Healthy";
-      }
-      41%,60%{
-          content: "Spread happiness";
-      }
-      61%,80%{
-          content: "Save resources";
-      }
-      81%,100%{
-          content: "Help each other";
-      }
-  }
-  
-  @keyframes typing {
-      10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-          width: 0;
-      }
-      5%,20%,25%,40%,45%,60%,65%,80%,85%{
-          width: calc(100% + 8px);
-      }
-  }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <title>{% block title %} {% endblock title %} | Leftovers Lifeline!</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <a id="logo" href="#">Logo!</a>
+          <!--logo require-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Homepage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/donor">Donor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/receiver">Receiver</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li>
+              
+            </ul>
+            <button class="btn btn-outline-secondary d-inline-flex align-items-center" type="button">
+              Sign in
+              <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"></use></svg>
+            </button>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
   
-
-
-
-
-</head>
-
-
- 
- 
     {% block body %} {% endblock body %}
  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
 
 
 {% if messages %}

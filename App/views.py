@@ -17,8 +17,8 @@ def about(request):
 def services(request):
     return render(request,'services.html')
     #return HttpResponse("this is services page") 
-def Executive(request):
-    return render(request,'Executive.html')
+def receiver(request):
+    return render(request,'receiver.html')
 def donor(request):
     return render(request,'donor.html')
 def contact(request):

@@ -1,42 +1,81 @@
 {% extends 'base.html' %}
 {% block title %} About Us {% endblock title %}
-{% block body %} 
+{% block body %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Purple Background</title>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #8E2DE2, #4A00E0);
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .content-box {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            margin: 20px; /* Add margin to the content-box */
-        }
-    </style>
+    <title>Our motive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add any additional CSS stylesheets or links here -->
 </head>
-<body>
-    <div class="content-box">
-        <h1>Welcome to Creative Purple Background</h1>
-        <p>This is some sample text in a creatively designed purple background.</p>
-    </div>
-</body>
-</html>
+  <div class="container my-3">
+    <h1 class="my-3 text center"> </h>
 
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/matter.jpg" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <p class="card-text">Why Food Waste Matters</p>
+            <div class="d-flex justify-content-between align-items-center">  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/rethink.jpg" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <p class="card-text">Rethink</p>
+            <div class="d-flex justify-content-between align-items-center">   
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/reduce.jpg" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <p class="card-text">Reduce</p>
+            <div class="d-flex justify-content-between align-items-center"> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/reuse.jpg" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <p class="card-text">Rescue</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/recycle.png" class="d-block w-100" alt="...">            
+          <div class="card-body">
+            <p class="card-text">Recycle</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/get_involved.png" class="d-block w-100" alt="...">
+          <div class="card-body">
+            <p class="card-text">Get Involved</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
 
 {% endblock body %}
