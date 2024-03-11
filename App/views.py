@@ -21,7 +21,7 @@ def receiver(request):
     return render(request,'receiver.html')
 def donor(request):
     return render(request,'donor.html')
-def donor(request):
+def login(request):
     return render(request,'login.html')
 def contact(request):
     if request.method == "POST" :
