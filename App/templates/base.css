@@ -1,7 +1,9 @@
 *{
     padding: 0;
     margin: 0;
-    color: rgb(3, 3, 3);
+    color: rgb(3,3,3);
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 body{
     width: 100%;
@@ -32,9 +34,8 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    box-shadow: 5px 5px 7px rgb(18, 180, 180);
-} 
-
+    box-shadow: 5px 2px  rgb(47, 166, 202);
+}
 #logo{
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -62,7 +63,7 @@ header{
 .side a{
     padding: 20px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(12, 11, 11);
     font-weight: 600;
     transition: all 500 ease-in-out;
 }
@@ -74,7 +75,6 @@ header{
 
 .wraper{
     display: flex;
-    
     justify-content:space-around;
     width: 97.3%;
 }
@@ -82,7 +82,7 @@ header{
 .wraper h1{
     padding-top: 150px;
 }
-.name h1{
+.h1{
     font-size: 55px;
 }
 
@@ -92,6 +92,8 @@ header{
 }
 .dropPlace{
     padding-top: 50px;
+    display: block;
+    position: absolute;
 }
 
 .dropsize{
@@ -108,7 +110,7 @@ header{
 body{
     margin: 0;
     padding: 0;
-    background-color: #2f3542;
+    background-color: #b48832;
     color: #fff;
     height: 100vh;
     font-family: "Montserrat", sans-serif;
@@ -142,7 +144,7 @@ body::before{
 
 .animated-text span::before{
     content: "Save food";
-    color: #ba0cf4;
+    color: #0cf414;
     animation: words 20s infinite;
 }
 
@@ -151,7 +153,7 @@ body::before{
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    background-color: #444241;
+    background-color: rgba(216, 185,121,.8);
     border-left: 2px solid #cc00ff;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
@@ -188,4 +190,7 @@ body::before{
     5%,20%,25%,40%,45%,60%,65%,80%,85%{
         width: calc(100% + 8px);
     }
+}
+footer{
+    color: black;
 }
