@@ -1,6 +1,7 @@
 from django.shortcuts import render , HttpResponse
 from datetime import datetime
 from App.models import Contact
+from App.models import login
 from django.contrib import messages
 
 # Create your views here.
@@ -23,6 +24,16 @@ def donor(request):
     return render(request,'donor.html')
 def login(request):
     return render(request,'login.html')
+    if request.method == "POST" :
+        name = request.POST.get('Full name')
+        product = request.POST.get('Product name')
+        mobile = request.POST.get('Mobile number')
+        location = request.POST.get('location')
+        quantity = request.POST.get('quantity')
+        login = login(name=name, product=product , mobile=mobile,location=location,quantity=quantity)
+        login.confirm()
+        messages.success(request, "Your message has been sent!")
+        
 def contact(request):
     if request.method == "POST" :
         name = request.POST.get('name')
