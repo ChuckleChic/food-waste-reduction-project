@@ -9,7 +9,7 @@ urlpatterns = [
     path("contact", views.contact , name='contact'),
     path("login", views.login , name='login'),
     path("receiver", views.receiver , name='receiver'),
-    path("rveg", views.receiver , name='rveg'),
+    path("rveg", views.rveg , name='rveg'),
     path("donor", views.donor , name='donor'),
    
    

@@ -1,3 +1,5 @@
+{% block title %} {% endblock title %}
+{% block body %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,19 +150,6 @@ body{
 
 	</style>
 	<!-- navbar-->
-	<header>
-		<nav class="navbar">
-			<img src="img.2.jpg" class="logo" alt="">
-			<ul class="links-container">
-				<li class="link-items"><a href="#" class="links">Home</a></li>
-				<li class="link-items"><a href="http://127.0.0.1:3000/Providerveg.html" class="links">Veg</a></li>
-				<li class="link-items"><a href="#" class="links">Non-Veg</a></li>
-				<li class="link-items"><a href="#" class="links">AboutUs</a></li>
-				<h6>Receiver</h6>
-				
-			</ul>
-		</nav>
-	</header>
 	
 	<!-- NAVBAR END -->
 	<!-- pop-up-->
@@ -359,3 +348,4 @@ let introAnimation = setInterval(function(){
 	</script>	
 </body>
 </html>
+{% endblock body %}
