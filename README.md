@@ -12,7 +12,13 @@
 
 # Conclusion: 
 
-Mentors and Mentees: 
+Mentors: 
 1. Khushi Muddi
 2. Rounak Jain
+
+Mentees:
+1. Priya Jha
+2. Vikas
+3. Sumit
+4. Lipika
 
