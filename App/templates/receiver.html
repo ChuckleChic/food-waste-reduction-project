@@ -1,4 +1,180 @@
-{% extends 'base.html' %}
-{% block title %} receiver {% endblock title %}
-{% block body %} hii
+{% block title %} {% endblock title %}
+{% block body %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROLEPAGE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Moirai+One&display=swap" rel="stylesheet">
+                                                                                                                                                                                                                                    
+  </head>
+<body>
+   <style>
+    
+
+  *{
+    margin:0;
+    padding:0;
+    
+    font-family:cursive;
+  }
+  .back{
+    height: 100vh;
+    width:100%;
+    background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;}
+    @keyframes color{
+      0%{
+        background-position: 0 50%;
+      }
+      50%{background-position: 100% 50%;}
+      1000%{background-position: 0 50%;}
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+
+    }
+
+    .center a{
+      display: inherit;
+      width:150px;
+      height:50px;
+      color:#262626;
+      font-size: 20px;
+      background: transparent;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid #262626;
+      transition: .5s;
+      transform: skew(15deg);
+    }
+
+    .center a:hover{
+      background: rgba(79,156,255,1);
+      color:#fff;
+    }
+    span:nth-child(1){
+      position: absolute;
+      width:15px;
+      height: 100%;
+      border: 2px solid #262626;
+      background: #900707;
+      top: 6px;
+      left: -19px;
+      transform: skewY(-45deg);
+    }
+    span:nth-child(2){
+      position: absolute;
+      width:100%;
+      height: 15px;
+      border: 2px solid #262626;
+      background: #275847;
+      bottom: -19px;
+      right: 6px;
+      transform: skewX(-45deg);
+      box-shadow: 0 40px 25px rgba(0,0,0,.2);
+    }
+
+    .container{
+      margin-bottom: 100px;
+    }
+    /* title gradient animation  */
+    h2{
+    position:absolute;
+  left:579px;
+top:36px;
+color:#000000;
+font-size: 50px;
+font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+-webkit-text-stroke: 0.3vw #000000;}
+h2::before{
+  content:attr(data-text);
+  position:absolute;
+  top:0;
+  left:0;
+  width:0;
+  height: 100%;
+  color:#087b8d;
+  -webkit-text-stroke: 0vw #4b4e5a;
+  border-right: 2px solid #29501b;
+  overflow: hidden;
+  animation: animate 6s linear infinite;  
+  
+}
+
+
+/* outline: none;
+animation:animate 5s linear infinite;} */
+
+@keyframes animate{
+  /* 0%,10%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+    color:#1c4e86;
+    text-shadow: none;
+  } */
+  0%,10%,100%{width:0;}
+  70%,90%{width:100%;}
+
+}
+h1{
+  position:absolute;
+left:127px;
+top:62px;
+font-family: 'Times New Roman', Times, serif;
+
+line-height:0.50em;
+outline: none;
+letter-spacing: 0.6em;
+
+font-family: "Madimi One", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+
+}
+
+
+
+   </style>
+  <div class="back"><h1>CHOOSE YOUR</h1><h2 data-text="ROLE"> ROLE..... </h2>
+  <div class="center">
+    <div class="container">
+      
+    <a href="/rveg" ><span></span><span></span>VEG</a></div>
+    <a href="http://127.0.0.1:3000/Receiver.html" ><span></span><span></span>NON-VEG</a>
+  </div>
+  
+  
+  <!-- <div class="container">
+        <img src="img.1.jpg" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h1>Provider</h1>
+          <p>about provider</p>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <img src="img.2.jpg" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h1>Receiver</h1>
+          <p>about Receiver</p>
+        </div>
+      </div>    -->
+</body>
+</html>
 {% endblock body %}

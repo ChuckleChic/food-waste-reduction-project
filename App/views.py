@@ -35,6 +35,9 @@ def donor(request):
 def receiver(request):
     return render(request,'receiver.html')
 
+def rveg(request):
+    return render(request,'rveg.html')
+
 def login(request):
     
     if request.method == "POST" :
