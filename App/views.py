@@ -38,6 +38,9 @@ def receiver(request):
 def rveg(request):
     return render(request,'rveg.html')
 
+def rnonveg(request):
+    return render(request,'rnonveg.html')
+
 def login(request):
     
     if request.method == "POST" :
