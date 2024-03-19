@@ -10,7 +10,7 @@ urlpatterns = [
     path("login", views.login , name='login'),
     path("receiver", views.receiver , name='receiver'),
     path("rveg", views.rveg , name='rveg'),
-    path("rnonveg", views.rveg , name='rnonveg'),
+    path("rnonveg", views.rnonveg , name='rnonveg'),
     path("donor", views.donor , name='donor'),
    
    
