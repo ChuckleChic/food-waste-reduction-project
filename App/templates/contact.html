@@ -7,8 +7,9 @@
 </div>
 <div class="container mb-3 py-4">
 <h1 class ="text-centre">Contact Me</h1>
-<form method= "post" action="/contact" >
+<form method="POST">
   {% csrf_token %}
+  {{ form.as_p }}
 <div class="mb-3">
     <label for="Name" class="form-label">Name</label>
     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">

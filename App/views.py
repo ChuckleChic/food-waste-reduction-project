@@ -1,8 +1,5 @@
-from django.shortcuts import render , HttpResponse
-from App.models import Contact
-from App.models import login  
-from App.models import donor
-
+from django.shortcuts import render, redirect
+from .forms import ContactForm, DonorForm, LoginForm
 from django.contrib import messages
 
 # Create your views here.
@@ -20,17 +17,17 @@ def services(request):
     return render(request,'services.html')
     #return HttpResponse("this is services page") 
 
+
 def donor(request):
-    if request.method == "POST" :
-        name = request.POST.get('Full name')
-        product = request.POST.get('Product name')
-        mobile = request.POST.get('Mobile number')
-        location = request.POST.get('location')
-        quantity = request.POST.get('quantity')
-        receiver = receiver(name=name, product=product , mobile=mobile, location=location , quantity=quantity)
-        receiver.save()
-       # messages.success(request, "Your message has been sent!")
-    return render(request,'donor.html')
+    if request.method == "POST":
+        form = DonorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Thank you for your donation!")
+            return redirect('donor')  # Redirect to the same page after successful form submission
+    else:
+        form = DonorForm()
+    return render(request, 'donor.html', {'form': form})
 
 def receiver(request):
     return render(request,'receiver.html')
@@ -42,25 +39,25 @@ def rnonveg(request):
     return render(request,'rnonveg.html')
 
 def login(request):
-    
-    if request.method == "POST" :
-        Username = request.POST.get('Username')
-        password = request.POST.get('password')
-        login = login(Username=Username, password=password)
-        login.save()
-       # messages.success(request, "Your message has been sent!")
-       
-    return render(request,'login.html')
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Login successful!")
+            return redirect('login')  # Redirect to the same page after successful form submission
+    else:
+        form = LoginForm()
+    return render(request, 'login.html', {'form': form})
         
 def contact(request):
-    if request.method == "POST" :
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        desc = request.POST.get('desc')
-        contact = Contact( name=name , email=email, desc=desc)
-        contact.save()
-        messages.success(request, "Your message has been sent!")
-        
-    return render(request,'contact.html' )
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your message has been sent!")
+            return redirect('contact')  # Redirect to the same page after successful form submission
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
 
 # Create your views here.

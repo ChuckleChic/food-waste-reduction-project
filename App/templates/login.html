@@ -11,8 +11,9 @@
 </head>
 <body>
     <div class="container">
-        <form method= "post" action="/login" >
+        <form method="POST">
             {% csrf_token %}
+            {{ form.as_p }}
             <h2>Login</h2>
             <div class="form-group">
                 <label for="username">Username:</label>

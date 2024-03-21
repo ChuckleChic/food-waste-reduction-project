@@ -177,8 +177,9 @@
 <body>
     <div class="container">
         <header>Provider Registration</header>
-        <form method="post">
+        <form method="POST">
             {% csrf_token %}
+            {{ form.as_p }}
             <div class="form first">
                 <span class="title">Personal details</span>
 
