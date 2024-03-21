@@ -9,7 +9,7 @@ class Contact(models.Model):
 class donor(models.Model):
     name = models.CharField(max_length=122)
     product = models.CharField(max_length=122)
-    mobile = models.TextField()
+    mobile = models.CharField(max_length=122)
     location = models.CharField(max_length=122)
     quantity = models.CharField(max_length=122)
     about_product = models.TextField()
