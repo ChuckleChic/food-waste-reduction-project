@@ -19,7 +19,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background:#4079f4;
+            {% comment %} background:#4079f4; {% endcomment %}
+            background-image: url('https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+
         }
         .container{
             position:relative;
@@ -28,7 +31,7 @@
             border-radius: 6px;
             padding: 30px;
             margin: 0 15px;
-            background-color: #fff;
+
             box-shadow: 0 5px 10px rgba(0,0,0,1);
         }
         .container header{
@@ -180,54 +183,6 @@
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <div class="form first">
-                <span class="title">Personal details</span>
-
-                <div class="fields">
-                    <div class="input-field">
-                        <label>Full Name</label>
-                        <input type="text" placeholder=" Enter your name"requied>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Product Name </label>
-                        <input type="text" placeholder="Enter Produt Name" required>
-                    </div>
-
-                    <div class="input-field">
-                        <div class="checkbox-group">
-                            <input type="radio" id="checkbox1" name="checkbox" checked>
-                            <label for="checkbox1">Veg</label>
-                            <input type="radio" id="checkbox2" name="checkbox">
-                            <label for="checkbox2">Nonveg</label>
-                          </div>
-                        </div>
-
-                    <div class="input-field">
-                        <label>Mobile Number</label>
-                        <input type="text" placeholder=" Enter your mobile number"requied>
-                        
-                    </div>
-
-                    <div class="input-field">
-                       <label>location</label>
-                        <input type="text" placeholder="Enter location" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>quantity</label>
-                        <input type="number" placeholder="Quantity in kgs"requied>
-                     </div>
-                     
-                </div>
-                <!-- <div class="input-field">
-                    <label>About product</label>
-                    <div class="text">
-                        
-                    </div>
-                </div> -->
-                <textarea  placeholder="about the product" rows="8"  required class="textarea"></textarea>
-            </div>
             <div class="bbuttons">
                     <button class="button cancel" href="#">Cancel</a>
                     <button class="button edit" href="#">Edit</a>
